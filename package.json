@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.12",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "axios": "^0.24.0",
+    "framer-motion": "^4.1.17",
     "next": "12.0.3",
+    "papaparse": "^5.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tslib": "^2.3.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "16.11.6",
+    "@types/papaparse": "^5.3.1",
     "@types/react": "17.0.34",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3",
