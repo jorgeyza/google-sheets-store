@@ -1,10 +1,14 @@
 # Google Sheets Store
 
+![web app preview](./google-sheets-store.png)
+
 This is a basic app built based on [this video](https://youtu.be/DgPcpte1eoA). In this web app I am using TypeScript, Next.js, ChakraUI, Google sheets and the WhatsApp API.
 
 You can select the desired products and when proceeding to the checkout, you will be redirected to a WhatsApp profile.
 
 I am using Google Sheets as the database, so every product that is registered there will appear on the frontend.
+
+You can view [live version here](https://google-sheets-store-9gt24cwym-jorgeyza.vercel.app/)
 
 ## How to run
 
