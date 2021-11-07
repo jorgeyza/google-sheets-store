@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import type { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
-import { Button, Grid, Link, Stack, Text } from '@chakra-ui/react';
+import { Button, Flex, Image, Grid, Link, Stack, Text } from '@chakra-ui/react';
 
 import api from '../product/api';
 import { Product } from '../product/types';
@@ -44,17 +44,35 @@ const Home: NextPage<Props> = ({ products }) => {
         <meta name="description" content="Store managed with Google Sheets" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Stack>
+      <Stack spacing={6}>
         <Grid
           gridGap={6}
           templateColumns="repeat(auto-fill, minmax(240px,1fr))"
         >
           {products.map((product) => (
-            <Stack backgroundColor="gray.100" key={product.id}>
-              <Text>{product.title}</Text>
-              <Text>{parseCurrency(product.price)}</Text>
+            <Stack
+              key={product.id}
+              backgroundColor="gray.100"
+              borderRadius="md"
+              padding={4}
+              spacing={3}
+            >
+              <Image
+                borderRadius="md"
+                maxHeight="150px"
+                objectFit="cover"
+                src={product.image}
+                alt={product.title}
+              />
+              <Stack spacing={1}>
+                <Text>{product.title}</Text>
+                <Text color="green.500" fontSize="sm" fontWeight="500">
+                  {parseCurrency(product.price)}
+                </Text>
+              </Stack>
               <Button
-                colorScheme="blue"
+                colorScheme="primary"
+                size="sm"
                 onClick={() => setCart((cart) => cart.concat(product))}
               >
                 Agregar
@@ -63,14 +81,23 @@ const Home: NextPage<Props> = ({ products }) => {
           ))}
         </Grid>
         {Boolean(cart.length) && (
-          <Button
-            as={Link}
-            href={`https://wa.me/51989109732?text=${encodeURIComponent(text)}`}
-            isExternal
-            colorScheme="whatsapp"
+          <Flex
+            position="sticky"
+            justifyContent="center"
+            bottom={0}
+            padding={2}
           >
-            Completar pedido ({cart.length} productos)
-          </Button>
+            <Button
+              isExternal
+              as={Link}
+              colorScheme="whatsapp"
+              href={`https://wa.me/510000000000?text=${encodeURIComponent(
+                text
+              )}`}
+            >
+              Completar pedido ({cart.length} productos)
+            </Button>
+          </Flex>
         )}
       </Stack>
     </>
