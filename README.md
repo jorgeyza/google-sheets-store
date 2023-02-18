@@ -2,7 +2,7 @@
 
 ![web app preview](./google-sheets-store.png)
 
-Web app where you can select the desired products and when proceeding to the checkout, you will be redirected to a WhatsApp profile.
+A web app where you can select the desired products and when proceeding to the checkout, you will be redirected to a WhatsApp profile.
 
 I am using Google Sheets as the database, so every product that is registered there will appear on the frontend.
 
