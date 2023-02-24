@@ -1,5 +1,7 @@
 # Google Sheets Store
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=google-sheets-store)
+
 ![web app preview](./google-sheets-store.png)
 
 A web app where you can select the desired products and when proceeding to the checkout, you will be redirected to a WhatsApp profile.
